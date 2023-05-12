@@ -2,16 +2,7 @@
 #include <stdlib.h>
 
 #ifndef RSTL_NO_INITIALIZER_LIST
-namespace std {
-    template<class type>
-    struct initializer_list {
-        type* src;
-        size_t srcSize;
-
-        initializer_list(const type __a, size_t __l) { }
-        initializer_list() { }
-    };
-}
+#include <initializer_list>
 #endif
 
 
