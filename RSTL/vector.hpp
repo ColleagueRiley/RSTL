@@ -1,5 +1,6 @@
 #include <string.h>
 #include <stdlib.h>
+#include <assert.h>
 
 #ifndef RSTL_NO_INITIALIZER_LIST
 #include <initializer_list>
@@ -14,6 +15,8 @@ namespace RSTL {
 
         void push_back(type data) {
             srcSize++;
+            
+            assert(size() <= capacity || !capacity);
 
             src = (type*)realloc(src, sizeof(type) * size());
 
@@ -21,6 +24,8 @@ namespace RSTL {
         }
 
         void push_back(vector<type> data) {
+            assert(data.size() <= capacity || !capacity);
+
             for (int i = 0; i < data.size(); i++)
                 push_back(data[i]);
         }
@@ -69,6 +74,8 @@ namespace RSTL {
         const type* c_str() { return data(); }
 
         vector(const type* data, size_t size) {
+            assert(size <= capacity || !capacity);
+
             src = (type*)malloc(size * sizeof(type));
 
             srcSize = size;
