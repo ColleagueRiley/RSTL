@@ -1,11 +1,10 @@
 # Riley's Standard Library
+ * C++'s standard library is bloated and has a lot of oop features. 
 
-* C++'s standard library is bloated and has a lot of oop features. 
+ * RSTL is super lightweight and tries not to use OOP features.
 
-* RSTL is super lightweight and tries not to use OOP features.
+ * RSTL is single-header so you don't have to worry about building or installing the library.
 
-* RSTL is single-header so you don't have to worry about building or installing the library.
+ * Currently, RSTL only includes string support and vector support, but it may support more in the future
 
-* Currently, RSTL only includes string support and vector support, but it may support more in the future
-
-* RSTL is designed for RSGL, so it's designed with libraries in mind
+ * RSTL is designed for RSGL, so it's designed with libraries in mind
