@@ -78,11 +78,10 @@ namespace RSTL {
 
         #ifndef RSTL_NO_INITIALIZER_LIST
         vector(std::initializer_list<type> list) {  
-            src = (type*)malloc(list.srcSize * sizeof(type));
+            src = (type*)malloc(0);
 
-            srcSize = list.srcSize;
-
-            memcpy(src, list.src, size() * sizeof(type));
+            for (auto& index : list)
+                push_back(index);
         }
         #endif
 
